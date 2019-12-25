@@ -1,3 +1,11 @@
 .*
-*.pdf
 !.gitignore
+
+#zip files
+*.gz
+
+#PDF files
+*.pdf
+
+#Data files
+chrX_data/

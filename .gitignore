@@ -5,13 +5,9 @@
 #zip files
 *.gz
 
-#PDF files
-*.pdf
-
 #Analysis Directories
+analysis/
 protocol/
-hisat2-alignment/
-log/
 
 #Data files
 chrX_data/

@@ -12,8 +12,8 @@
 # Define variables:
 REFERENCE_DIR="./chrX_data/indexes/"
 SAMPLE_DIR="./chrX_data/samples/"
-OUTPUT_DIR="./hisat2-alignment/"
-LOG_DIR="./log/hisat2/"
+OUTPUT_DIR="./analysis/hisat2-alignment/"
+LOG_DIR="./analysis/log/hisat2/"
 
 # Check if output directories exist or create it if it doesn't
 [ -d $OUTPUT_DIR ] || mkdir -p $OUTPUT_DIR

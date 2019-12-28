@@ -19,18 +19,7 @@ LOG_DIR="./analysis/log/hisat2/"
 [ -d $OUTPUT_DIR ] || mkdir -p $OUTPUT_DIR
 [ -d $LOG_DIR ] || mkdir -p $LOG_DIR
 
-# Get paired files from the sample directory
-#for fileone in ${SAMPLE_DIR}*_1.fastq.gz; do
-#	filetwo=$(echo $fileone | sed 's/_1./_2./g')
-#	sample_name=$(basename $fileone _1.fastq.gz )
-#	echo $sample_name
-#	echo $fileone
-#	echo $filetwo
-#	ls -ls $fileone	
-#	ls -ls $filetwo
-#done
-
-
+# Get the pair of FASTQ files and run hisat2 alignment
 for fileone in ${SAMPLE_DIR}*_1.fastq.gz; do
 	
 	filetwo=$(echo $fileone | sed 's/_1./_2./g')

@@ -20,3 +20,5 @@ for samfile in ${SAMPLE_DIR}*.sam; do
 	rm "${SAMPLE_DIR}${sample_name}.sam"
 
 done
+
+exit

@@ -18,3 +18,5 @@ for samfile in ${SAMPLE_DIR}*.bam; do
     samtools index "${SAMPLE_DIR}${sample_name}" "${SAMPLE_DIR}${sample_name}.bai"
 
 done
+
+exit

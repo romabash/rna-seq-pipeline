@@ -13,6 +13,7 @@ SAMPLE_DIR="./analysis/hisat2-alignment/"
 # Sort and Convert the SAM file from the sample directory, and delete afterwards
 for samfile in ${SAMPLE_DIR}*.sam; do
 
+	# Get the stem of the samfile to convert to bam 
 	sample_name=$(basename $samfile .sam )
 
     samtools sort "${SAMPLE_DIR}${sample_name}.sam" -o "${SAMPLE_DIR}${sample_name}.sorted.bam"

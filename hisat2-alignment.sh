@@ -10,8 +10,8 @@
 #---------------------------------------------
 
 # Define variables:
-REFERENCE_DIR="./chrX_data/indexes/"
 SAMPLE_DIR="./chrX_data/samples/"
+REFERENCE_DIR="./chrX_data/indexes/"
 OUTPUT_DIR="./analysis/hisat2-alignment/"
 LOG_DIR="./analysis/log/hisat2/"
 
@@ -20,9 +20,13 @@ LOG_DIR="./analysis/log/hisat2/"
 [ -d $LOG_DIR ] || mkdir -p $LOG_DIR
 
 # Get the pair of FASTQ files and run hisat2 alignment
+# fileone and filetwo will conatain the full path 
 for fileone in ${SAMPLE_DIR}*_1.fastq.gz; do
 	
+	# Replace _1 in fileone with _2 for the seconf FASTQ file
 	filetwo=$(echo $fileone | sed 's/_1./_2./g')
+
+	# Get the stem for the sample name using basename minus the _1.fastq.gz extension
 	sample_name=$(basename $fileone _1.fastq.gz )
     
 	hisat2 --dta -x "${REFERENCE_DIR}/chrX_tran" \
@@ -32,5 +36,5 @@ for fileone in ${SAMPLE_DIR}*_1.fastq.gz; do
 
 done
 
-# Working
+exit 
 

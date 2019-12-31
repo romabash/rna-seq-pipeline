@@ -11,9 +11,9 @@
 SAMPLE_DIR="./analysis/hisat2-alignment/"
 
 # Sort and Convert the SAM file from the sample directory, and delete afterwards
-for samfile in ${SAMPLE_DIR}*.bam; do
+for bamfile in ${SAMPLE_DIR}*.bam; do
 
-	sample_name=$(basename $samfile )
+	sample_name=$(basename $bamfile )
 
     samtools index "${SAMPLE_DIR}${sample_name}" "${SAMPLE_DIR}${sample_name}.bai"
 

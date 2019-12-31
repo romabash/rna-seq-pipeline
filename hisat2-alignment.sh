@@ -29,7 +29,7 @@ for fileone in ${SAMPLE_DIR}*_1.fastq.gz; do
 	# Get the stem for the sample name using basename minus the _1.fastq.gz extension
 	sample_name=$(basename $fileone _1.fastq.gz )
     
-	hisat2 --dta -x "${REFERENCE_DIR}/chrX_tran" \
+	hisat2 --dta -x "${REFERENCE_DIR}chrX_tran" \
 	-1 $fileone -2 $filetwo \
 	-S "${OUTPUT_DIR}${sample_name}.sam" \
 	--summary-file "${LOG_DIR}${sample_name}-alignment.log"

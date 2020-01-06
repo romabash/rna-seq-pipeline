@@ -11,8 +11,8 @@
 - **StringTie**: version 2.0
 - **Gffcompare**: version 0.11.2
 - **IGV**: version 2.5.2
-- **R**: version 3.4.1
-- **Ballgown**: version
+- **R**: version 3.6.1
+- **Ballgown**: version 2.18.0
 
 ```bash
 conda install -c bioconda hisat2
